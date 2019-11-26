@@ -17,6 +17,7 @@ import { ProjectsComponent } from "./projects/projects.component";
 import { SkillsComponent } from "./skills/skills.component";
 import { BlogComponent } from "./blog/blog.component";
 import { RecommendationsComponent } from "./recommendations/recommendations.component";
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { RecommendationsComponent } from "./recommendations/recommendations.comp
     BrowserModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

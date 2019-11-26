@@ -1,17 +1,226 @@
 <!-- Start your project here-->
-<div style="height: 100vh">
-  <div class="flex-center flex-column">
-    <h1 class="animated fadeIn mb-4"></h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>franklin Kirimi</title>
+  </head>
+  <body>
+    <div class="container">
+      <!--Navbar-->
+      <mdb-navbar
+        SideClass="navbar navbar-expand-lg navbar-dark purple cyan"
+        [containerInside]="false"
+      >
+        <!-- Navbar brand -->
+        <mdb-navbar-brand
+          ><a class="navbar-brand" href="/home"
+            >Frank Kirimi</a
+          ></mdb-navbar-brand
+        >
 
-    <h5 class="animated fadeIn mb-3 ">
-      Home component.
-    </h5>
-    <h6 class="animated fadeIn mb-3">
-      Start adding shit...
-      <a href="https://mdbootstrap.com/angular">Go- Loco</a>.
-    </h6>
+        <!-- Collapsible content -->
+        <links>
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link waves-light" mdbWavesEffect href="/home"
+                >Home<span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-light" mdbWavesEffect href="/about"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-light" mdbWavesEffect href="/services"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-light" mdbWavesEffect href="/projects"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-light" mdbWavesEffect href="/skills"
+                >Skills</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-light" mdbWavesEffect href="/blog"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-light" mdbWavesEffect href="/contact"
+                >Contact</a
+              >
+            </li>
 
-    <p class="animated fadeIn text-muted">MDB Team</p>
-  </div>
-</div>
-<!-- /Start your project here-->
+            <!-- Dropdown -->
+            <li class="nav-item dropdown" dropdown>
+              <a
+                dropdownToggle
+                mdbWavesEffect
+                type="button"
+                class="nav-link dropdown-toggle waves-light"
+                mdbWavesEffect
+              >
+                Resume<span class="caret"></span
+              ></a>
+              <div
+                *dropdownMenu
+                class="dropdown-menu dropdown dropdown-primary"
+                role="menu"
+              >
+                <a
+                  class="dropdown-item waves-light"
+                  mdbWavesEffect
+                  href="/recommendations"
+                  >Recommendations</a
+                >
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#"
+                  >Another action</a
+                >
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#"
+                  >Something else here</a
+                >
+                <div class="divider dropdown-divider"></div>
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#"
+                  >Separated link</a
+                >
+              </div>
+            </li>
+          </ul>
+          <!-- Links -->
+
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+              <a class="nav-link"
+                >1 <mdb-icon fas icon="envelope"></mdb-icon
+              ></a>
+            </li>
+            <li class="nav-item avatar dropdown" dropdown>
+              <a
+                dropdownToggle
+                mdbWavesEffect
+                type="button"
+                class="nav-link dropdown-toggle waves-light"
+                mdbWavesEffect
+              >
+                <img
+                  src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg"
+                  alt=""
+                  class="img-fluid rounded-circle z-depth-0"
+              /></a>
+
+              <div
+                *dropdownMenu
+                class="dropdown-menu dropdown-menu-right dropdown dropdown-primary"
+                role="menu"
+              >
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#"
+                  >My account</a
+                >
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#"
+                  >Log out</a
+                >
+              </div>
+            </li>
+          </ul>
+        </links>
+        <!-- Collapsible content -->
+      </mdb-navbar>
+      <!--/.Navbar-->
+      <router-outlet></router-outlet>
+    </div>
+    <div class="container">
+      <!-- Footer -->
+      <footer class="page-footer font-large cyan darken-3">
+        <!-- Footer Elements -->
+        <div class="container">
+          <!-- Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-12 py-5">
+              <div class="mb-5 flex-center">
+                <!-- Facebook -->
+                <a class="fb-ic">
+                  <mdb-icon
+                    fab
+                    icon="facebook"
+                    size="2x"
+                    class="white-text mr-md-5 mr-3"
+                  ></mdb-icon>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic">
+                  <mdb-icon
+                    fab
+                    icon="twitter"
+                    size="2x"
+                    class="white-text mr-md-5 mr-3"
+                  ></mdb-icon>
+                </a>
+                <!-- Google +-->
+                <a class="gplus-ic">
+                  <mdb-icon
+                    fab
+                    fab
+                    icon="google-plus"
+                    size="2x"
+                    class="white-text mr-md-5 mr-3"
+                  ></mdb-icon>
+                </a>
+                <!--Linkedin -->
+                <a class="li-ic">
+                  <mdb-icon
+                    fab
+                    icon="linkedin"
+                    size="2x"
+                    class="white-text mr-md-5 mr-3"
+                  ></mdb-icon>
+                </a>
+                <!--Instagram-->
+                <a class="ins-ic">
+                  <mdb-icon
+                    fab
+                    icon="instagram"
+                    size="2x"
+                    class="white-text mr-md-5 mr-3"
+                  ></mdb-icon>
+                </a>
+                <!--Pinterest-->
+                <a class="pin-ic">
+                  <mdb-icon
+                    fab
+                    icon="pinterest"
+                    size="2x"
+                    class="white-text mr-md-5 mr-3"
+                  ></mdb-icon>
+                </a>
+              </div>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row-->
+        </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+          © 2019 Copyright:
+          <a href="https://mdbootstrap.com/education/bootstrap/">
+            franklinkirimi.com</a
+          >
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </div>
+  </body>
+</html>
